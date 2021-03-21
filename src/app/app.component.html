@@ -1,0 +1,32 @@
+<div class="container">
+
+  Welcome to Graph!
+  
+  <ng-container *ngIf="!authenticated">
+    <button id="loginPopup" type="button" (click)="signIn()" style="
+      background-color: #ffffff;
+      color: #5e5e5e;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid #8c8c8c;
+      height: 41px;
+      font-family: 'Segoe UI';
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    ">
+        <img alt="SSO Sign In" style="margin-left: 12px" src="https://docs.microsoft.com/en-us/azure/active-directory/develop/media/howto-add-branding-in-azure-ad-apps/ms-symbollockup_mssymbol_19.png" /><span style="padding-right: 20px; padding-left: 20px;">Sign in with Microsoft</span>
+  </button>
+  </ng-container>
+
+  <ng-container *ngIf="authenticated && user">
+    <span>Display name: {{ user.displayName }}</span>
+    <span>Email: {{ user.email }}</span>
+    
+    <img [src]="user.photo" style="width: 100px;"/>
+
+  </ng-container>
+
+</div>
