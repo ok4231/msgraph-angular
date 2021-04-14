@@ -1,4 +1,6 @@
 # Microsoft Graph in Angular
+* Create an app registration in Azure
+
 * Make sure the app in Azure has a platform with a redirect URI to http://localhost
 
 * Check if the app has the correct permissions: User.Read and User.ReadBasic.All
